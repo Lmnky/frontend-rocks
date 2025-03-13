@@ -95,33 +95,3 @@ export const App = () => {
     </div>
   )
 }
-export const App = () => {
-  const [data, setData] = useState<PokemonCard[]>([]);
-
-  useEffect(() => {
-    fetchData().then((result) => {
-      setData(result); // Rimosso l'errore nella mappatura dei dati
-    });
-  }, []);
-
-  return (
-    <div>
-      <div className="flex flex-wrap gap-4 p-4">
-        {data.map((item) => {
-          return (
-            <Card
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              types={item.types}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-export const Detail = () => {
-  return null;
-};
