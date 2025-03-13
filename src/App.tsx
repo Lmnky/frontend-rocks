@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams,Link } from "react-router";
 
 export const Detail = () => {
   const {id} = useParams();
@@ -43,7 +43,7 @@ export const App = () => {
             Cambia
           </button>
 
-          <link to="/frontend-rocks/dettaglio/1">link pagina di dettaglio</link>
+          <Link to="/frontend-rocks/dettaglio/l">link pagina di dettaglio</Link>
           
         </div>
       </div>
